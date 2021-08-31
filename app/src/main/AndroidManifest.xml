@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lottery.sambad.admin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:name=".ui.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LotterySambadAdmin"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute">
+        <activity
+            android:name=".ui.reports.UpdatePaidInfoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.users_account_info.ExpireLicenseUsersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.quick_search.QuickSearchActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.users_account_info.DisableUsersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.users_account_info.StanderdUsersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.users_account_info.PremiumUsersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.users_account_info.LoggedOutUsersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.users_account_info.LoggedInUsersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.users_account_info.DetailsUsersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.new_version.NewVersionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.new_users.HeadlineActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.NotificationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.active_users.ActiveUsersActivity"
+            android:exported="true" />
+        <activity android:name=".ui.tutorial.HomeTutorialUploadActivity" />
+        <activity android:name=".ui.ads_image.AdsImageUploadActivity" />
+        <activity android:name=".ui.lottery_number_upload.LotteryNumberUploadActivity" />
+        <activity android:name=".ui.pdf_and_image_upload.PdfAndImageUploadActivity" />
+        <activity
+            android:name=".LockActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

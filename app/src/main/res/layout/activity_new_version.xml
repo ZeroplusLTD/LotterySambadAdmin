@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NotificationActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/device_target_layout"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.05"
+                    android:text="Change logo"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#DC575454" />
+                <RadioGroup
+                    android:id="@+id/rGappLogo"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rbapplogoYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text="YES"/>
+                    <RadioButton
+                        android:id="@+id/rbapplogoNo"
+                        android:layout_width="wrap_content"
+                        android:checked="true"
+                        android:layout_height="wrap_content"
+                        android:text="No"/>
+                </RadioGroup>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/option_bottom_view"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.05"
+                    android:text="Change Name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#DC575454" />
+                <RadioGroup
+                    android:id="@+id/rgNmG"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rgYbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text="YES"/>
+                    <RadioButton
+                        android:id="@+id/rgnoBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="No"/>
+                </RadioGroup>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/option_bottom_view"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.05"
+                    android:text="Force Update"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#DC575454" />
+
+                <Switch
+                    android:id="@+id/updatepositionSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_10sdp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/option_bottom_view"/>
+            <ImageView
+                android:id="@+id/UploadViewBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tutorial_thumb_up"
+                android:layout_margin="@dimen/_15sdp"/>
+            <EditText
+                android:id="@+id/videoLinkText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/notify_box_backg"
+                android:drawablePadding="5dip"
+                android:hint="Video Link"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/versionCodeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/notify_box_backg"
+                android:drawablePadding="5dip"
+                android:hint="Version code"
+                android:padding="10dp" />
+
+
+            <EditText
+                android:id="@+id/descriptionText"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/notify_box_backg"
+                android:gravity="top|left"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:padding="10dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/device_target_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/GetUpdate"
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="get ready"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="#243280"
+            android:layout_above="@+id/device_target_group"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

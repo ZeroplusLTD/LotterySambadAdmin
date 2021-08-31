@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">LMP Control Panel</string>
+
+    <string name="upload_pdf_and_image">Upload pdf and image</string>
+    <string name="upload_lottery_number">Upload lottery number</string>
+    <string name="upload_ads_image">Upload ads image</string>
+    <string name="upload_home_tutorial">Upload home tutorial</string>
+    <string name="select_pdf">Select Pdf File</string>
+    <string name="select_image">Select Image File</string>
+    <string name="selected_file_empty">Selected file is empty.</string>
+    <string name="selected_file_is_not_valid">Selected file is not valid.</string>
+    <string name="need_to_grant_all_permission">Need to grant all permission to use this app.</string>
+    <string name="upload_document">Upload Document</string>
+    <string name="write_document_title">Write document title</string>
+    <string name="file_creation_failed">Sorry, File creation failed.</string>
+    <string name="unknown_error">Sorry, Unknown error occurred.</string>
+    <string name="write_your_all_lottery_number">Write your all lottery numbers</string>
+    <string name="write_lottery_serial_number">Write your lottery serial number</string>
+    <string name="write_message_about_lottery_number">Write a message about this lottery number</string>
+    <string name="write_state_name">Write state name</string>
+    <string name="first_prize">First Prize</string>
+    <string name="second_prize">Second Prize</string>
+    <string name="third_prize">Third Prize</string>
+    <string name="fourth_prize">Fourth Prize</string>
+    <string name="fifth_prize">Fifth Prize</string>
+    <string name="notify_title_morning">🅼🅾🆁🅽🅸🅽🅶 01:00 🅿🅼</string>
+    <string name="notify_title_day">ⒹⒶⓎ 0⃣4⃣:0⃣0⃣ ⓅⓂ</string>
+    <string name="notify_title_evening">🅔🅥🅔🅝🅘🅝🅖 08:00 🅟🅜</string>
+    <string name="notify_msg_common">💐------All The Best------💐</string>
+    <string name="data_uploaded">Data uploaded successfully.</string>
+
+
+</resources>

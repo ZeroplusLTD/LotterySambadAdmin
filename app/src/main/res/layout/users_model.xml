@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootClick"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/defaultuser"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#E6E6E6"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/UrOnlineStatus"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:background="@drawable/online_status"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                tools:ignore="MissingConstraints" />
+            <View
+                android:visibility="gone"
+                android:id="@+id/UrOfflineStatus"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:background="@drawable/offline_status"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                tools:ignore="MissingConstraints" />
+            <View
+                android:visibility="gone"
+                android:id="@+id/UrDisableStatus"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:background="@drawable/disable_status"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/paidUserView"
+                android:background="@drawable/online_status"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:text="₹"
+                android:gravity="center"
+                android:textColor="@color/white"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/freeUserView"
+                android:background="@drawable/online_status"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/white"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_toRightOf="@+id/profileLayout"
+            android:layout_toLeftOf="@+id/SmsOrNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/_10sdp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/PhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:text="9062686255"/>
+            <TextView
+                android:id="@+id/RegisterDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="Join On: 10-04-2021"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SmsOrNotification"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/ReviewBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/purple_700"
+                android:background="@drawable/review_button"
+                android:text="Review" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/SmsSendBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_sms" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/NotifySendBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_notifications" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:background="#66BFBFBF"/>
+</LinearLayout>

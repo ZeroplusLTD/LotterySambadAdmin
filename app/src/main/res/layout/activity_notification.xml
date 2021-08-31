@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NotificationActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/device_target_layout"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/deviceToken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/notify_box_backg"
+                android:drawablePadding="5dip"
+                android:hint="Device Token"
+                android:inputType="textPersonName"
+                android:padding="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/notify_box_backg"
+                android:drawablePadding="5dip"
+                android:hint="Title"
+                android:padding="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/notify_box_backg"
+                android:gravity="top|left"
+                android:hint="Message"
+                android:inputType="textMultiLine"
+                android:padding="10dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/device_target_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:orientation="horizontal">
+
+
+        <RadioGroup
+            android:layout_weight="0.5"
+            android:id="@+id/device_target_group"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:gravity="center"
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="All device"/>
+            <RadioButton
+                android:gravity="center"
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specific"/>
+        </RadioGroup>
+        <Button
+            android:id="@+id/send_notify"
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_notify_btn_ic"
+            android:background="#243280"
+            android:layout_above="@+id/device_target_group"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pdf_and_image_upload.PdfAndImageUploadActivity">
+    <ScrollView
+        android:fillViewport="true"
+        android:background="@drawable/gradient_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/pdfUploadButton"
+                style="@style/MyButtonStyle"
+                android:visibility="gone"
+                android:text="@string/select_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp" />
+            <TextView
+                android:id="@+id/selectedPdfFileNameTextView"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/imageUploadButton"
+                style="@style/MyButtonStyle"
+                android:text="@string/select_image"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp" />
+            <TextView
+                android:id="@+id/selectedImageFileNameTextView"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <com.lottery.sambad.admin.ui.custom.DropDownView
+                android:id="@+id/resultPublishTimeDropDownTextView"
+                style="@style/MyBoldTextViewStyle"
+                android:background="@color/red"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp" />
+
+            <Button
+                android:id="@+id/uploadDocumentButton"
+                style="@style/MyButtonStyle"
+                android:text="@string/upload_document"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp" />
+        </LinearLayout>
+    </ScrollView>
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/red" />
+</androidx.constraintlayout.widget.ConstraintLayout>
